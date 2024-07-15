@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import { ThemeProvider } from "@/components/theme-provider"
+import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { ThemeProvider } from './components/theme-provider'
 
 function App() {
   const [count, setCount] = useState(0)
