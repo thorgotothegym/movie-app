@@ -7,9 +7,25 @@ const Main = lazy(() =>
   }))
 );
 
+const Login = lazy(() =>
+  import("../pages/Login/Login").then((module) => ({
+    default: module.Login,
+  }))
+);
+
+const Layout = lazy(() =>
+  import("../pages/Layout/Layout").then((module) => ({
+    default: module.Layout,
+  }))
+);
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
