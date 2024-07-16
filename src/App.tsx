@@ -3,6 +3,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { Layout } from "./pages/Layout/Layout";
 import { Login } from "./pages/Login/Login";
 import { Main } from "./pages/Main/Main";
+import { Register } from "./pages/Register/Register";
 
 export const App = () => {
   return (
@@ -11,6 +12,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Login />} />
+            <Route path="/create-account" element={<Register />} />
             <Route path="/start" element={<Main />} />
           </Route>
         </Routes>
