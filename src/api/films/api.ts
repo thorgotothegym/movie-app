@@ -10,7 +10,7 @@ export const fetchFilms = ({ title }: FetchFilmsParams) =>
       console.log(data);
     });
 
-export const CheckFilm = (title: string) => {
+export const checkFilm = (title: string) => {
   axios.get<any>(`http://localhost:1234/movie/${title}`).then(({ data }) => {
     console.log(data);
   });
